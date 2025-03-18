@@ -23,11 +23,12 @@ function agregarAmigo() {
 function actualizarLista() {
     let listaHTML = document.getElementById("listaAmigos");
     listaHTML.innerHTML = ""; 
-    listaAmigos.forEach((amigo) => {
+
+    for (let i = 0; i < listaAmigos.length; i++) {
         let li = document.createElement("li");
-        li.textContent = amigo;
+        li.textContent = listaAmigos[i];
         listaHTML.appendChild(li);
-    });
+    }
 }
 
 
